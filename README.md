@@ -202,8 +202,8 @@ REA-Spo/
 
 1. Clona el repositorio:
    ```bash
-   git clone https://github.com/Carlos-jim/Carlos-jim.git
-   cd Carlos-jim
+   git clone https://github.com/Carlos-jim/harmonia.git
+   cd harmonia
    ```
 
 2. Instala las dependencias del proyecto:
