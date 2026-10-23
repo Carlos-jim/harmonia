@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Harmonia</title>
+    <!-- YouTube IFrame API for official studio audio streaming -->
+    <script src="https://www.youtube.com/iframe_api"></script>
+  </head>
+
+  <body class="bg-black text-white m-0 p-0 overflow-hidden select-none">
+    <div id="root"></div>
+    <!-- Persistent container for YouTube audio engine -->
+    <div
+      id="harmonia-yt-player-container"
+      style="position: fixed; top: -1000px; left: -1000px; width: 300px; height: 200px; opacity: 1; pointer-events: none; z-index: -9999;"
+    ></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>

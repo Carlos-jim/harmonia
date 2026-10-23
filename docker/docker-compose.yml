@@ -1,0 +1,21 @@
+services:
+  navidrome:
+    image: deluan/navidrome:latest
+    container_name: harmonia-navidrome
+    user: "1000:1000" # Ajustar si es necesario según el usuario del host
+    ports:
+      - "4533:4533"
+    restart: unless-stopped
+    environment:
+      # Escaneo automático de la carpeta de música cada 1 minuto
+      ND_SCANSCHEDULE: 1m
+      ND_LOGLEVEL: info
+      ND_SESSIONTIMEOUT: 48h
+      ND_DEFAULTTHEME: Dark
+      # Habilitar transcodificación si el cliente lo solicita
+      ND_ENABLETRANSCODINGCONFIG: "true"
+      # Permitir descargas en streaming
+      ND_ENABLEDOWNLOADS: "true"
+    volumes:
+      - ./data:/data
+      - ./music:/music:ro
